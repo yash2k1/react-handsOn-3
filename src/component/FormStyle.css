@@ -1,0 +1,58 @@
+.form{
+  display: flex;  
+  align-items: center;
+  flex-direction: column;
+}
+.field{
+    margin-top: 20px;
+}
+.field input{
+    height: 50px;
+    border-radius: 10px;
+    background: rgb(9, 181, 220);
+}
+.field input::placeholder{
+position: absolute;
+left: 50%;
+top: 50%;
+color: white;
+transform: translate(-50%,-50%);
+}
+input[type=text],input[type=number]{
+   text-align: center;
+    color: white;
+}
+.field label{
+    font-size: 22px;
+}
+button{
+    margin-top: 20px;
+    font-size: 22px;
+    border-radius: 10px;
+    color: white;
+     background: rgb(9, 181, 220);
+}
+.output{
+    margin-top: 20px;
+    border: 2px solid black;
+    background: rgb(9, 181, 220);
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 90%;
+   
+}
+.box{
+    border-radius: 10px;
+    background: plum;
+    margin: 20px;
+   width: 350px;
+   height: 40px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   white-space: nowrap;
+   border: 2px solid black;
+
+
+}
