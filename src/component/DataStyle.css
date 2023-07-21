@@ -1,0 +1,38 @@
+
+
+.output{
+   
+    border: 2px solid black;
+    background: rgb(9, 181, 220);
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 50px auto;
+}
+.box{
+    border-radius: 10px;
+    background: plum;
+    margin: 20px;
+   width: 350px;
+   height: 40px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   white-space: nowrap;
+   border: 2px solid black;
+
+
+}
+.Back{
+    margin: auto;
+    margin-top: 50px;
+    background: rgb(9, 181, 220);
+    max-width: 250px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: 2px solid black;
+}

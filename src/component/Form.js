@@ -1,14 +1,13 @@
 import { Component } from "react";
 import './FormStyle.css'
+import Data from './Data'
 export default class Form extends Component{
-
-    com
     state={
         Name:'',
         Dept:'',
         Rating:'',
-      
-        EmpDep:[]
+        EmpDep:[],
+        flag:true,
     }
     changeHandle=(e)=>{
         // e.preventDefault()
@@ -20,22 +19,32 @@ export default class Form extends Component{
     }
 clickHandle=(e)=>{
         e.preventDefault() 
-
+   
     let newObj={
         name:this.state.Name,
         Dept:this.state.Dept,
         Rating:this.state.Rating,
     }
     this.state.EmpDep.push(newObj);
-    this.setState({EmpDep:this.state.EmpDep})
-    this.setState({Name:""})
-    this.setState({Dept:""})
-    this.setState({Rating:""})
+    this.setState(
+        {EmpDep:this.state.EmpDep,
+        Name:"",
+        Dept:"",
+        Rating:"",
+        flag:!this.state.flag
+    }
+        )
    
 }
+toggleFunc=()=>{
+    this.setState({flag:!this.state.flag})
+}
     render(){
-        return(
+      
+ return(
 <>
+{(this.state.flag) ?
+ <><h1>Employee FeedBack form</h1>
 <form className="form">
     <div className="field1 field">
     <label htmlFor="name">Name:</label>
@@ -52,9 +61,14 @@ clickHandle=(e)=>{
 </div>
 
 
-<button type="button" onClick={this.clickHandle} required>submit</button>
+<button type="button" onClick={this.clickHandle}  required>submit</button>
 </form>
-{
+ </> : <Data value={this.state.EmpDep} toggleFlag={this.toggleFunc}/>
+
+}
+
+{/* <Data value="nice"/> */}
+{/* {
      this.state.EmpDep.length ?(<div className="output" >
 {
     this.state.EmpDep.map((item,index)=>{
@@ -65,10 +79,8 @@ clickHandle=(e)=>{
    
 }
             </div>
-        ):undefined
-    
-   
-}
+        ):undefined  
+} */}
 
 
 </> 

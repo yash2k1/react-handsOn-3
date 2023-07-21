@@ -1,4 +1,17 @@
+body{
+    background: linear-gradient(rgb(74, 74, 231),pink, rgb(188, 185, 185) ) no-repeat;
+    min-height: 100vh;
+  }
+  ::-webkit-scrollbar{
+    display: none;
+  }
+
+h1{
+   width:fit-content;
+    margin:50px auto;
+  }
 .form{
+    margin-top: 50px;
   display: flex;  
   align-items: center;
   flex-direction: column;
@@ -26,33 +39,17 @@ input[type=text],input[type=number]{
     font-size: 22px;
 }
 button{
-    margin-top: 20px;
+    margin: 20px 0;
     font-size: 22px;
     border-radius: 10px;
     color: white;
      background: rgb(9, 181, 220);
+     
 }
-.output{
-    margin-top: 20px;
-    border: 2px solid black;
-    background: rgb(9, 181, 220);
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    width: 90%;
-   
-}
-.box{
+button:hover{
+    font-size: 24px;
     border-radius: 10px;
-    background: plum;
-    margin: 20px;
-   width: 350px;
-   height: 40px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   white-space: nowrap;
-   border: 2px solid black;
-
-
+    color: white;
+     background: rgb(20, 182, 218);
+     cursor: pointer;
 }
